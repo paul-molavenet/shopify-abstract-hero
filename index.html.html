@@ -925,40 +925,53 @@
   <h2>Get a free estimate<br><em>in 24 hours.</em></h2>
   <p>No commitment. No sales pitch. Just honest advice and a clear quote.</p>
 
-  <div class="contact-card">
-    <div class="contact-row">
-      <div class="form-group">
-        <label for="fname">First Name</label>
-        <input type="text" id="fname" placeholder="e.g. Jake">
-      </div>
-      <div class="form-group">
-        <label for="lname">Last Name</label>
-        <input type="text" id="lname" placeholder="e.g. Miller">
-      </div>
+<form action="https://formspree.io/f/xbdpjzga" method="POST" class="contact-card">
+  
+  <div class="contact-row">
+    <div class="form-group">
+      <label for="fname">First Name</label>
+      <input type="text" id="fname" name="first_name" placeholder="e.g. Jake" required>
     </div>
     <div class="form-group">
-      <label for="email">Work Email</label>
-      <input type="email" id="email" placeholder="you@company.com">
+      <label for="lname">Last Name</label>
+      <input type="text" id="lname" name="last_name" placeholder="e.g. Miller" required>
     </div>
-    <div class="form-group">
-      <label for="service">What do you need?</label>
-      <select id="service">
-        <option value="" disabled selected>Select a service…</option>
-        <option>Custom Theme Development</option>
-        <option>Private App & API Development</option>
-        <option>Store Migration</option>
-        <option>Performance Optimization</option>
-        <option>Headless / Hydrogen Build</option>
-        <option>Ongoing Retainer Support</option>
-        <option>Not sure yet — need advice</option>
-      </select>
-    </div>
-    <div class="form-group">
-      <label for="message">Tell us about your project <span style="color:var(--muted);font-weight:400;text-transform:none;letter-spacing:0">(optional)</span></label>
-      <textarea id="message" placeholder="Brief description, timeline, budget range…"></textarea>
-    </div>
-    <button class="submit-btn" type="button" onclick="handleSubmit(this)">Get My Free Quote →</button>
   </div>
+
+  <div class="form-group">
+    <label for="email">Work Email</label>
+    <input type="email" id="email" name="email" placeholder="you@company.com" required>
+  </div>
+
+  <div class="form-group">
+    <label for="service">What do you need?</label>
+    <select id="service" name="service" required>
+      <option value="" disabled selected>Select a service…</option>
+      <option>Custom Theme Development</option>
+      <option>Private App & API Development</option>
+      <option>Store Migration</option>
+      <option>Performance Optimization</option>
+      <option>Headless / Hydrogen Build</option>
+      <option>Ongoing Retainer Support</option>
+      <option>Not sure yet — need advice</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="message">
+      Tell us about your project 
+      <span style="color:var(--muted);font-weight:400;text-transform:none;letter-spacing:0">
+        (optional)
+      </span>
+    </label>
+    <textarea id="message" name="message" placeholder="Brief description, timeline, budget range…"></textarea>
+  </div>
+
+  <button class="submit-btn" type="submit">
+    Get My Free Quote →
+  </button>
+
+</form>
 
   <p class="form-note">🔒 We never share your information. Ever.</p>
 </section>
